@@ -1,0 +1,63 @@
+<br>
+
+{% if page.meta.gitea_url %}
+<span class="md-source-file__fact">
+  <span class="md-icon">
+    <img class="nosvg-icon nosvg-size-small" src="/assets/note.webp"/>
+  </span>
+  <a href="{{ page.meta.gitea_url }}">Suggest changes</a>
+</span>
+<br>
+{% endif %}
+
+<span class="md-source-file__fact">
+  <span class="md-icon">
+    <img class="nosvg-icon nosvg-size-small" src="/assets/user.webp"/>
+  </span>
+{% if page.meta.author %}
+  {% if page.meta.author.__class__.__name__ == "list" %}
+    {{ page.meta.author | join('<br>') }}
+  {% else %}
+    {{ page.meta.author }}
+  {% endif %}
+{% else %}
+  Nihilist
+{% endif %}
+</span>
+
+{% if page.meta.date %}
+<span class="md-source-file__fact">
+  <span class="md-icon">
+    <img class="nosvg-icon nosvg-size-small" src="/assets/clock.webp"/>
+  </span>
+  {% if page.meta.date.__class__.__name__ == "list" %}
+    {{ page.meta.date | join('<br>') }}
+  {% else %}
+    {{ page.meta.date }}
+  {% endif %}
+</span>
+{% endif %}
+<br>
+
+<span class="md-source-file__fact" style="max-width: 100%; overflow: scroll;">
+  <span class="md-icon">
+    <img class="nosvg-icon nosvg-size-small" src="/assets/monero.webp"/>
+  </span>
+
+  {% if page.meta.xmr.__class__.__name__ == "list" %}
+    {% for address in page.meta.xmr %}
+      {% if address|length == 95 %}
+        Donate XMR to {{ page.meta.author[loop.index0] }}:<br>{{ address }}<br>
+      {% else %}
+        Donate XMR to Nihilist:<br>8C1MNeB4KEHGApg6sPxFPn3NWERD3mPv7AjC8mCm1CJCXjoKnf36SYBdZ6ywCMdZRC4cxu7Uax3tufDqMXS2mLvHNCJzQZS<br>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% if page.meta.xmr|length == 95 %}
+      Donate XMR to the author:<br>{{ page.meta.xmr }}
+    {% else %}
+      Donate XMR to Nihilist:<br>8C1MNeB4KEHGApg6sPxFPn3NWERD3mPv7AjC8mCm1CJCXjoKnf36SYBdZ6ywCMdZRC4cxu7Uax3tufDqMXS2mLvHNCJzQZS
+    {% endif %}
+  {% endif %}
+</span>
+<br>

@@ -1,0 +1,133 @@
+/*:root  > * {
+  --md-primary-fg-color:        #639;
+  --md-primary-fg-color--light: #639;
+  --md-primary-fg-color--dark:  #639;
+}*/
+
+:root{
+  --md-nav-icon--prev: url('/assets/arrow-left.webp');
+  --md-nav-icon--next: url('/assets/more-right.webp');
+  --md-toc-icon: url('/assets/toc.webp')
+}
+
+@media only screen and (min-width: 76.25em) {
+  .md-main__inner {
+    max-width: none;
+  }
+  .md-sidebar--primary {
+    left: 0;
+  }
+  .md-sidebar--secondary {
+    right: 0;
+    margin-left: 0;
+    -webkit-transform: none;
+    transform: none;   
+  }
+}
+
+.md-source__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.6rem !important;
+  margin-left: 0.5rem;
+}
+
+.md-source__icon.md-icon > img {
+  position: relative;
+  top: 0.5rem;
+}
+
+.nosvg-size-small {
+  width: 0.9rem;
+}
+.nosvg-size-medium {
+  width: 1.2rem;
+}
+
+.nosvg-icon {
+  filter: drop-shadow(4000px 0 0 currentcolor);
+  transform: translateX(-4000px);
+  display: block;
+}
+
+.md-header__button.md-logo {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: -60px;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 50%;
+  width: 50%;
+}
+
+img {
+  max-height: 800px;
+}
+
+.md-typeset pre > code {
+  padding: 9.5px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #FFFFFF;
+  
+  white-space: pre-wrap;
+
+  background-color: #000000;
+}
+
+.md-typeset pre {
+  border-color: #f09018;
+  margin: 1em 0;
+  border-width: 1px;
+  border-style: solid;
+}
+
+strong {
+  background-color: #08101c;
+  color: #e5ae39;
+  padding-right: 1px;
+  padding-left: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 2px solid #08101c;
+  border-radius: 5px;
+}
+
+.md-typeset strong { 
+  background-color: #08101c;
+  color: #e5ae39;
+  padding-right: 1px;
+  padding-left: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 2px solid #08101c;
+  border-radius: 5px;
+}
+
+.highlight .hll {
+  background-color: #3cf4;
+  box-shadow: 4px 0 0 0 #37f inset;
+  margin: 0 -10px;
+  padding: 0 10px;
+  display: block;
+  max-width: 100%;
+}
+
+.legal-banner {
+  background-color: #111;
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 1.25em;
+}
+
+.nav-item-core {
+  color: #ffbb99;
+}
+.nav-item-core:hover {
+  color: #ff9100;
+}
+
